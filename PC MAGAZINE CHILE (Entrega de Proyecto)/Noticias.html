@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC MAGAZINE CL</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #d32f2f; /* Inspirado en PC Magazine */
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    /* Sección Noticias */
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #d32f2f;
+      text-transform: uppercase;
+      border-bottom: 3px solid #d32f2f;
+      padding-bottom: 0.5rem;
+    }
+
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .news-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .news-item img {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .news-item .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .news-item h3 {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .news-item p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .news-item a {
+      align-self: flex-start;
+      background-color: #d32f2f;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .news-item a:hover {
+      background-color: #b71c1c;
+    }
+
+    @media (max-width: 768px) {
+      .news-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .news-item img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="text-carousel">
+      <div class="carousel-content">
+        <p>PC MAGAZINE CHILE</p>
+        <p>¡Guía independiente para el usuario de computadoras!</p>
+        <p>VOLUMEN 10 NÚMERO 6 1997</p>
+        <p>Software para gráficos</p>
+        <p>Primera Vista de los Próximos Browsers de Microsoft y Netscape</p>
+        <p>Impresoras de red</p>
+      </div>
+    </div>
+    
+    <!-- Barra de Navegación Agrandada -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+          <img src="logo.png" alt="Logo" id="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a> 
+         </li>
+          <li class="nav-item">
+               <a class="nav-link" href="tendencias.html">Tendencias</a> 
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="Estrategias.html">Estrategias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="PC.html">PCs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Noticias.html">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pasatiempos.html">Pasatiempos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  <div class="container">
+    <!-- Sección Del Mundo del Cómputo -->
+    <div class="section">
+      <h2>Del Mundo del Cómputo</h2>
+      <div class="news-list">
+        <div class="news-item">
+          <img src="WINDOWS98.jpg" alt="Noticia 1">
+          <div class="content">
+            <h3>Lanzamiento de Windows 98 en desarrollo</h3>
+            <p>Se discutió sobre el desarrollo y las expectativas en torno a Windows 98, la próxima gran versión del sistema operativo de Microsoft. Aunque aún no se había lanzado oficialmente, se anticipaba que esta nueva versión mejoraría la estabilidad y la compatibilidad de Windows 95, además de incluir nuevas características de administración y rendimiento.</p>
+            <a href="noticia1.html">Leer más</a>
+          </div>
+        </div>
+        <div class="news-item">
+          <img src="BANDA ANCHA.jpg" alt="Noticia 2">
+          <div class="content">
+            <h3>El crecimiento del acceso a Internet y la adopción de la banda ancha</h3>
+            <p>En 1997, la conexión a Internet seguía en expansión, con una creciente adopción de conexiones de banda ancha en algunos mercados. Se mencionó cómo empresas y usuarios domésticos comenzaban a aprovechar más servicios en línea, impulsados por la mejora en las tecnologías de conectividad, como el acceso por ADSL y otras formas de acceso rápido.</p>
+            <a>Leer más</a>
+          </div>
+        </div>
+        <div class="news-item">
+          <img src="intelmicrosoft.jpg" alt="Noticia 3">
+          <div class="content">
+            <h3>Acuerdo entre Intel y Microsoft para el desarrollo de tecnologías</h3>
+            <p>Se cubrió un acuerdo estratégico entre Intel y Microsoft, dos de las compañías más influyentes en la industria de la tecnología. Este acuerdo se centraba en mejorar la interoperabilidad entre el hardware de Intel y el software de Microsoft, con el objetivo de optimizar el rendimiento de las PC de escritorio y estaciones de trabajo.</p>
+            <a>Leer más</a>
+          </div>
+        </div>
+        <div class="news-item">
+          <img src="imac.jpg" alt="Noticia 4">
+          <div class="content">
+            <h3>Apple lanzando el iMac en 1997</h3>
+            <p>La revista también destacó el regreso de Apple a la competencia de PCs con el lanzamiento del iMac, diseñado por Jonathan Ive. Este modelo de computadora, con su diseño innovador y su enfoque en la facilidad de uso, buscaba revitalizar la marca y atraer tanto a nuevos usuarios como a los que ya habían abandonado Apple en años anteriores.</p>
+            <a>Leer más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; PC MAGAZINE Chile.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

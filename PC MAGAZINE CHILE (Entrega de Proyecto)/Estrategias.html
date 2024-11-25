@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC MAGAZINE CL</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    /* Artículo de Portada */
+    .featured-article {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .featured-article img {
+      width: 100%;
+      height: auto;
+    }
+
+    .featured-article .content {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .featured-article h2 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .featured-article p {
+      font-size: 1rem;
+      color: #555;
+    }
+    footer {
+  width: 100%; 
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative; /* Por defecto */
+  bottom: 0;
+}
+
+
+
+.container {
+  flex: 1; /* Empuja el footer hacia abajo si no hay suficiente contenido */
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #d32f2f;
+  text-transform: uppercase;
+  border-bottom: 3px solid #d32f2f;
+  padding-bottom: 0.5rem;
+}
+
+/* Infraestructura */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 1rem);
+  max-width: calc(33% - 1rem);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card .content {
+  padding: 1rem;
+}
+
+.card h3 a {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Herramientas de Red */
+.tools {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tool {
+  display: flex;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tool img {
+  width: 150px;
+  height: auto;
+}
+
+.tool .content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tool h3 a{
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.tool p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Administración de Redes */
+.list {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-item {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.list-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .cards, .tools {
+    flex-direction: column;
+  }
+
+  .card, .tool {
+    max-width: 100%;
+  }
+
+  .tool img {
+    width: 100px;
+  }
+}
+  </style>
+</head>
+<body>
+    <div class="text-carousel">
+      <div class="carousel-content">
+        <p>PC MAGAZINE CHILE</p>
+        <p>¡Guía independiente para el usuario de computadoras!</p>
+        <p>VOLUMEN 10 NÚMERO 6 1997</p>
+        <p>Software para gráficos</p>
+        <p>Primera Vista de los Próximos Browsers de Microsoft y Netscape</p>
+        <p>Impresoras de red</p>
+      </div>
+    </div>
+    
+    <!-- Barra de Navegación Agrandada -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+          <img src="logo.png" alt="Logo" id="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a> 
+         </li>
+          <li class="nav-item">
+               <a class="nav-link" href="tendencias.html">Tendencias</a> 
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="Estrategias.html">Estrategias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="PC.html">PCs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Noticias.html">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pasatiempos.html">Pasatiempos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div class="container">
+    <!-- Infraestructura -->
+    <div class="section">
+      <h2>Infraestructura para LAN, Intranets e Internet</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="Cisco Catalyst 2900 Series Switches.jpg" alt="Infraestructura 1">
+          <div class="content">
+            <h3><a>Cisco Catalyst 2900 Series Switches</a></h3>
+            <p>Los switches Cisco Catalyst 2900 son productos clave para la infraestructura de redes LAN en empresas. Estos switches de alto rendimiento permitían la gestión eficiente del tráfico de datos y la expansión de la red, asegurando una comunicación fluida entre dispositivos conectados a la misma red local.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="3Com SuperStack II Hub 3000.jpg" alt="Infraestructura 2">
+          <div class="content">
+            <h3><a>3Com SuperStack II Hub 3000</a></h3>
+            <p>El 3Com SuperStack II Hub 3000 es un hub de red de alto rendimiento que soportaba velocidades de 10/100 Mbps, ideal para la creación de redes locales (LAN). Su diseño modular lo hacía flexible para empresas que necesitaban una solución escalable para sus necesidades de conectividad.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Microsoft Proxy Server 2.0.jpg" alt="Infraestructura 3">
+          <div class="content">
+            <h3><a>Microsoft Proxy Server 2.0</a></h3>
+            <p>Microsoft Proxy Server 2.0 es una solución para la gestión del acceso a Internet en redes corporativas, permitiendo a las empresas configurar firewalls, controlar el tráfico de Internet y mejorar la seguridad de sus intranets. Este producto facilitaba la creación de barreras de seguridad y optimizaba el acceso a servicios en línea.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Herramientas de Red -->
+<div class="container">
+  <!-- Fila de Bootstrap -->
+  <div class="row">
+    <!-- Herramientas de Red -->
+    <div class="col-md-6">
+      <div class="section">
+        <h2>Herramientas de Red</h2>
+        <div class="tools">
+          <div class="tool">
+            <img src="Norton Utilities for Networks.jpg" alt="Herramienta 1">
+            <div class="content">
+                <h3><a>Norton Utilities for Networks</a></h3>
+                <p>Norton Utilities for Networks es una herramienta clave para la administración de redes en entornos corporativos. Proporciona funciones de diagnóstico, reparación y optimización de redes, permitiendo a los administradores gestionar el rendimiento y solucionar problemas de manera eficiente en redes locales (LAN) e intranets.</p>
+            </div>
+          </div>
+          <div class="tool">
+            <img src="NetWare 4.11 de Novell.jpg" alt="Herramienta 2">
+            <div class="content">
+                <h3><a>NetWare 4.11 de Novell</a></h3>
+                <p>NetWare 4.11 es una solución de red basada en servidores que proporciona servicios de archivo, impresión y acceso a recursos compartidos en redes de área local (LAN). Este producto era popular para la administración de redes en empresas, ofreciendo una plataforma confiable y segura para la gestión de recursos compartidos y la comunicación en entornos corporativos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Administración de Redes -->
+    <div class="col-md-6">
+      <div class="section">
+        <h2>Administración de Redes</h2>
+        <div class="tools">
+          <div class="tool">
+            <img src="Solaris 2.6 de Sun Microsystems.jpg" alt="Herramienta 1">
+            <div class="content">
+                <h3><a>Solaris 2.6 de Sun Microsystems</a></h3>
+                <p>Solaris 2.6 es un sistema operativo utilizado en servidores para la administración de redes. Con su robusta arquitectura basada en Unix, proporcionaba herramientas avanzadas para gestionar redes, asegurando una operación eficiente y segura en entornos empresariales con grandes volúmenes de datos.</p>
+            </div>
+          </div>
+          <div class="tool">
+            <img src="HP OpenView Network Node Manager.jpg" alt="Herramienta 2">
+            <div class="content">
+                <h3><a>HP OpenView Network Node Manager</a></h3>
+                <p>HP OpenView Network Node Manager es una herramienta para la administración de redes, diseñada para monitorear y gestionar redes empresariales complejas. Permite a los administradores de redes detectar, diagnosticar y resolver problemas de conectividad y rendimiento en tiempo real, proporcionando visibilidad completa de la infraestructura de red.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div >
+    <footer>
+        <p>&copy; PC MAGAZINE Chile.</p>
+    </footer>
+
+</body>
+</html>

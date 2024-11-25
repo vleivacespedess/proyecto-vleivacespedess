@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC MAGAZINE CL</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #d32f2f; /* Inspirado en PC Magazine */
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    /* Sección de estaciones de trabajo */
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #d32f2f;
+      text-transform: uppercase;
+      border-bottom: 3px solid #d32f2f;
+      padding-bottom: 0.5rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      flex: 1 1 calc(33% - 1rem); /* Tres tarjetas por fila */
+      max-width: calc(33% - 1rem);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card .content {
+      padding: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .card .cta {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: #d32f2f;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .card .cta:hover {
+      background-color: #b71c1c;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+      }
+
+      .card {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="text-carousel">
+      <div class="carousel-content">
+        <p>PC MAGAZINE CHILE</p>
+        <p>¡Guía independiente para el usuario de computadoras!</p>
+        <p>VOLUMEN 10 NÚMERO 6 1997</p>
+        <p>Software para gráficos</p>
+        <p>Primera Vista de los Próximos Browsers de Microsoft y Netscape</p>
+        <p>Impresoras de red</p>
+      </div>
+    </div>
+    
+    <!-- Barra de Navegación Agrandada -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+          <img src="logo.png" alt="Logo" id="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a> 
+         </li>
+          <li class="nav-item">
+               <a class="nav-link" href="tendencias.html">Tendencias</a> 
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" href="Estrategias.html">Estrategias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="PC.html">PCs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Noticias.html">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pasatiempos.html">Pasatiempos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <div class="container">
+    <!-- Sección Estaciones de trabajo -->
+    <div class="section">
+      <h2>Estaciones de trabajo</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="Compaq Deskpro EN 5330.jpg" alt="Estación 1">
+          <div class="content">
+            <h3>Compaq Deskpro EN 5330</h3>
+            <p>Equipado con procesadores Pentium y opciones de expansión, estaba diseñado para ofrecer un alto rendimiento en entornos corporativos, facilitando tareas multitarea y gestión de grandes volúmenes de trabajo.</p>
+
+          </div>
+        </div>
+        <div class="card">
+          <img src="Gateway 2000 G6-400.jpg" alt="Estación 2">
+          <div class="content">
+            <h3>Gateway 2000 G6-400</h3>
+            <p>El Gateway 2000 G6-400 era una opción de alto rendimiento con un procesador Pentium MMX de 200 MHz, dirigido a usuarios que requerían una computadora potente para tareas multimedia, diseño gráfico y aplicaciones intensivas en recursos. Su diseño atractivo y su enfoque en la versatilidad lo hicieron popular tanto para usuarios domésticos como profesionales.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="IBM Aptiva E-series 215.jpg" alt="Estación 3">
+          <div class="content">
+            <h3>IBM Aptiva E-series 215</h3>
+            <p>El IBM Aptiva E-series 215 es un PC de consumo masivo que ofrecía un rendimiento sólido y una excelente relación calidad-precio. Con características como un procesador Pentium, una buena capacidad de almacenamiento y opciones de expansión, se posicionaba como una opción confiable para usuarios domésticos y pequeñas empresas.</p>
+          </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; PC MAGAZINE Chile.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC MAGAZINE CL</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .section {
+      flex: 1 1 calc(50% - 1rem); /* Dos columnas */
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #d32f2f;
+      text-transform: uppercase;
+      border-bottom: 3px solid #d32f2f;
+      padding-bottom: 0.5rem;
+    }
+
+    .section .article-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .article {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .article:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .article img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .article .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .article h3 a{
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .article p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex: 1 1 100%; 
+      }
+
+      .article img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="text-carousel">
+    <div class="carousel-content">
+      <p>PC MAGAZINE CHILE</p>
+      <p>¡Guía independiente para el usuario de computadoras!</p>
+      <p>VOLUMEN 10 NÚMERO 6 1997</p>
+      <p>Software para gráficos</p>
+      <p>Primera Vista de los Próximos Browsers de Microsoft y Netscape</p>
+      <p>Impresoras de red</p>
+    </div>
+  </div>
+  
+  <!-- Barra de Navegación Agrandada -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Logo" id="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a> 
+       </li>
+        <li class="nav-item">
+             <a class="nav-link" href="tendencias.html">Tendencias</a> 
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Estrategias.html">Estrategias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="PC.html">PCs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Noticias.html">Noticias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Pasatiempos.html">Pasatiempos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container">
+        <!-- Sección Software -->
+        <div class="section">
+            <h2>Software</h2>
+            <div class="article-list">
+              <div class="article">
+                <img src="Macromedia Director.jpg" alt="Software 1">
+                <div class="content">
+                  <h3> <a>Macromedia Director</a></h3>
+                  <p>Macromedia Director es un software de creación multimedia que permite desarrollar aplicaciones interactivas, animaciones y contenido multimedia, utilizado especialmente para la creación de CD-ROMs y sitios web interactivos.</p>
+                </div>
+              </div>
+              <div class="article">
+                <img src="Microsoft Office 97.jpg" alt="Software 2">
+                <div class="content">
+                    <h3> <a>Microsoft Office 97</a></h3>
+
+                  <p>Microsoft Office 97 es una suite de productividad que incluye Word, Excel, PowerPoint y Outlook, mejorando la eficiencia en tareas de oficina con nuevas funciones y una interfaz más amigable.</p>
+                </div>
+              </div>
+              <div class="article">
+                <img src="Lotus SmartSuite.jpg" alt="Software 3">
+                <div class="content">
+                    <h3> <a>Lotus SmartSuite</a></h3>
+                  <p>Lotus SmartSuite es una suite de productividad que incluye herramientas como procesador de texto, hoja de cálculo y software de presentaciones, diseñada para mejorar la eficiencia en oficinas y entornos profesionales.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Sección Periféricos -->
+          <div class="section">
+            <h2>Periféricos</h2>
+            <div class="article-list">
+                <div class="article">
+                  <img src="Hewlett-Packard LaserJet 5.jpg" alt="Software 1">
+                  <div class="content">
+                  <h3> <a>Hewlett-Packard LaserJet 5</a></h3>
+                    
+                    <p>Esta impresora láser destaca por su alta velocidad y calidad de impresión, convirtiéndola en una opción popular para entornos empresariales que necesitan impresiones rápidas y nítidas.</p>
+                  </div>
+                </div>
+                <div class="article">
+                  <img src="Iomega Zip Drive.jpg" alt="Software 2">
+                  <div class="content">
+                  <h3> <a>Iomega Zip Drive</a></h3>
+                    
+                    <p>El Zip Drive de Iomega es un producto revolucionario en el almacenamiento portátil, ofreciendo discos con mayor capacidad que los disquetes tradicionales, ideales para la transferencia y respaldo de datos.</p>
+                  </div>
+                </div>
+                <div class="article">
+                  <img src="Canon CanoScan 600.jpg" alt="Software 3">
+                  <div class="content">
+                  <h3> <a>Canon CanoScan 600</a></h3>
+                    
+                    <p>Este escáner de alta resolución es popular por su capacidad para digitalizar documentos e imágenes con gran precisión, siendo ideal para oficinas y fotógrafos que necesitan digitalizar material de alta calidad.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+          <!-- Sección Hardware -->
+          <div class="section">
+            <h2>Hardware</h2>
+            <div class="article-list">
+                <div class="article">
+                  <img src="Procesadores Pentium MMX de Intel.jpg" alt="Software 1">
+                  <div class="content">
+                  <h3> <a>Procesadores Pentium MMX de Intel</a></h3>
+                    
+                    <p>Los procesadores Pentium MMX de Intel se destacan por mejorar el rendimiento en tareas multimedia y aplicaciones de gráficos, brindando una mayor velocidad y eficiencia, lo que los convierte en una opción popular para equipos de escritorio y estaciones de trabajo.</p>
+                  </div>
+                </div>
+                <div class="article">
+                  <img src="Placas base con soporte para PCI.jpg" alt="Software 2">
+                  <div class="content">
+                  <h3> <a>Placas base con soporte para PCI</a></h3>
+                    
+                    <p>Las placas base que incorporan el bus PCI (Peripheral Component Interconnect) comienzan a ser más comunes, permitiendo una mayor velocidad de comunicación entre la CPU y los periféricos, mejorando el rendimiento general del sistema y abriendo la puerta a nuevas tecnologías de expansión.</p>
+                  </div>
+                </div>
+                <div class="article">
+                  <img src="Discos duros SCSI de alta capacidad.jpg" alt="Software 3">
+                  <div class="content">
+                  <h3> <a>Discos duros SCSI de alta capacidad</a></h3>
+                    
+                    <p>Los discos duros SCSI (Small Computer System Interface) de alta capacidad ganan popularidad, especialmente en entornos profesionales que requieren un almacenamiento rápido y fiable, como servidores y estaciones de trabajo, debido a su rendimiento superior en comparación con los discos IDE tradicionales.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+          <!-- Sección Internet -->
+          <div class="section">
+            <h2>Internet</h2>
+            <div class="article-list">
+                <div class="article">
+                  <img src="Microsoft Internet Explorer 4.0.jpg" alt="Software 1">
+                  <div class="content">
+                  <h3> <a>Microsoft Internet Explorer 4.0</a></h3>
+                    
+                    <p>Esta versión del navegador web destaca por su integración con el sistema operativo Windows 95, ofreciendo una navegación más rápida, fluida y con soporte para tecnologías avanzadas como Java y ActiveX, mejorando la experiencia en la web.</p>
+                  </div>
+                </div>
+                <div class="article">
+                  <img src="Netscape Communicator.jpg" alt="Software 2">
+                  <div class="content">
+                  <h3> <a>Netscape Communicator</a></h3>
+                    
+                    <p>Netscape Communicator es una suite todo en uno que incluye un navegador web, correo electrónico, mensajería instantánea y herramientas de colaboración, destacándose por su enfoque en la integración de múltiples servicios en una única plataforma.</p>
+                  </div>
+                </div>
+                <div class="article">
+                  <img src="AOL 4.0 (America Online).jpg" alt="Software 3">
+                  <div class="content">
+                  <h3> <a>AOL 4.0 (America Online)</a></h3>
+                    
+                    <p>AOL 4.0 es una de las principales plataformas de acceso a Internet en esa época, proporcionando acceso dial-up, correo electrónico, servicios de mensajería y una amplia variedad de contenido en línea, popularizando la navegación web para usuarios domésticos.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  </div>
+
+  <footer>
+    <p>&copy; PC MAGAZINE Chile.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

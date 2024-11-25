@@ -1,0 +1,242 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC MAGAZINE CL</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #d32f2f; 
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .article-title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #d32f2f;
+    }
+
+    .article-meta {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .article-content h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+      color: #d32f2f;
+    }
+
+    .related-articles {
+      margin-top: 2rem;
+    }
+
+    .related-articles h2 {
+      font-size: 1.8rem;
+      color: #d32f2f;
+      margin-bottom: 1rem;
+    }
+
+    .related-articles .related-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .related-articles .related-item {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      flex: 1 1 calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .related-articles .related-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .related-articles .related-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .related-articles .related-item h3 {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .related-articles .related-list {
+        flex-direction: column;
+      }
+
+      .related-articles .related-item {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="text-carousel">
+    <div class="carousel-content">
+      <p>PC MAGAZINE CHILE</p>
+      <p>¡Guía independiente para el usuario de computadoras!</p>
+      <p>VOLUMEN 10 NÚMERO 6 1997</p>
+      <p>Software para gráficos</p>
+      <p>Primera Vista de los Próximos Browsers de Microsoft y Netscape</p>
+      <p>Impresoras de red</p>
+    </div>
+  </div>
+  
+ 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Logo" id="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a> 
+           </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="tendencias.html">Tendencias</a> 
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="Estrategias.html">Estrategias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="PC.html">PCs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Noticias.html">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Pasatiempos.html">Pasatiempos</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  <div class="container">
+    
+    <div class="featured-image">
+      <img src="impresoras.jpg" alt="Imagen destacada">
+    </div>
+
+   
+    <h1 class="article-title">Impresoras de Red</h1>
+
+ 
+    <p class="article-meta">Por Valentina Leiva | Junio 1997</p>
+
+    <!-- Contenido del artículo -->
+    <div class="article-content">
+      <p>Exploramos las impresoras más avanzadas del año, enfocándonos en modelos que combinan alta calidad, velocidad y eficiencia para satisfacer las demandas tanto de oficinas pequeñas como grandes. Con la evolución de las tecnologías de inyección de tinta y láser, estas impresoras ofrecen soluciones robustas y rentables para empresas y usuarios exigentes. A través de pruebas exhaustivas, destacamos los modelos que sobresalen en resolución, durabilidad y facilidad de uso, asegurando que los lectores puedan tomar decisiones informadas para optimizar su productividad.</p>
+
+      <h2>Las mejores impresoras de 1997 para tu oficina</h2>
+      <p>La sección de impresoras de este número de PC Magazine Chile presenta las opciones más destacadas en el mercado, ideales para aquellos que buscan maximizar la eficiencia sin sacrificar la calidad. Evaluamos una gama de impresoras láser e inyección de tinta, comparando características como velocidad de impresión, costo por página y capacidad de manejo de diferentes tipos de papel. Ya sea para tareas de oficina diarias o proyectos más exigentes, estas impresoras están diseñadas para ofrecer un rendimiento consistente y resultados impecables.</p>
+
+
+    </div>
+
+    <!-- Artículos relacionados -->
+    <div class="related-articles">
+      <h2>Selección de Impresoras</h2>
+      <div class="related-list">
+        <div class="related-item">
+          <img src="HP Officejet Pro 1150c.jpg" alt="Artículo relacionado 1">
+          <h3>HP OFFICEJET PRO 1150C</h3>
+          <p>La HP OfficeJet Pro 1150C es una impresora de inyección de tinta diseñada para ofrecer un rendimiento eficiente y de alta calidad en entornos de oficina pequeños y medianos. Con capacidades de impresión a color y en blanco y negro, destaca por su velocidad y resolución de impresión, brindando documentos nítidos y detallados. Su diseño compacto la hace ideal para espacios limitados, mientras que su tecnología de impresión avanzada asegura resultados rápidos y profesionales. Además, es conocida por su confiabilidad y bajo costo operativo, siendo una opción popular para usuarios que buscan una solución de impresión asequible y eficiente.</p>
+        </div>
+        <div class="related-item">
+          <img src="PHASER 600.jpg"Artículo relacionado 2">
+          <h3>PHASER 600</h3>
+          <p>La Phaser 600 es una impresora láser monocromática de Xerox, diseñada para ofrecer un rendimiento rápido y de alta calidad en entornos de oficina pequeños o en el hogar. Con una capacidad de impresión de hasta 20 páginas por minuto y una resolución de hasta 1200 x 600 dpi, esta impresora garantiza resultados nítidos y claros en documentos de texto y gráficos. Su diseño compacto y fácil de usar la convierte en una opción accesible para usuarios que buscan una impresora confiable, eficiente y de bajo costo para sus necesidades diarias de impresión.</p>
+        </div>
+        <div class="related-item">
+          <img src="DOCUMENT CENTRE 230DC.jpg" alt="Artículo relacionado 3">
+          <h3>DOCUMENT CENTRE 230DC</h3>
+          <p>La Document Centre 230DC de Xerox es una impresora multifuncional láser diseñada para satisfacer las necesidades de oficinas de tamaño medio a grande. Este dispositivo no solo imprime, sino que también ofrece capacidades de copiado, escaneo y envío de faxes, todo en un solo equipo. Con una velocidad de impresión de hasta 23 páginas por minuto y una resolución de hasta 600 x 600 dpi, proporciona resultados nítidos y rápidos en documentos de texto y gráficos. Su capacidad para manejar grandes volúmenes de trabajo y su facilidad de uso la convierten en una solución eficiente para ambientes de oficina que requieren productividad constante. Además, su diseño modular permite adaptarse a las necesidades específicas de cada empresa.</p>
+        </div>
+        <div class="related-item">
+          <img src="DOCUPRINT C55.jpg" alt="Artículo relacionado 4">
+          <h3>DOCUPRINT C55</h3>
+          <p>La DocuPrint C55 de Xerox es una impresora láser a color diseñada para entornos de oficina que requieren una alta calidad de impresión en documentos coloridos y en blanco y negro. Con una velocidad de hasta 20 páginas por minuto en color y 25 páginas por minuto en blanco y negro, ofrece un rendimiento eficiente para pequeños y medianos volúmenes de impresión. Su resolución de hasta 1200 x 1200 dpi asegura imágenes y texto nítidos y detallados. Además, la DocuPrint C55 se destaca por su facilidad de uso, capacidades de conectividad y bajo costo operativo, lo que la convierte en una opción ideal para oficinas que necesitan un equilibrio entre calidad y eficiencia a un precio competitivo.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <footer>
+    <p>&copy; PC MAGAZINE Chile.</p>
+  </footer>
+</body>
+</html>

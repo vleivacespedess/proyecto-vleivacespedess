@@ -1,0 +1,228 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC MAGAZINE CL</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #d32f2f; 
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .article-title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #d32f2f;
+    }
+
+    .article-meta {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-content {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .article-content h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+      color: #d32f2f;
+    }
+
+    .related-articles {
+      margin-top: 2rem;
+    }
+
+    .related-articles h2 {
+      font-size: 1.8rem;
+      color: #d32f2f;
+      margin-bottom: 1rem;
+    }
+
+    .related-articles .related-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .related-articles .related-item {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      flex: 1 1 calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .related-articles .related-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .related-articles .related-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .related-articles .related-item h3 {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .related-articles .related-list {
+        flex-direction: column;
+      }
+
+      .related-articles .related-item {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="text-carousel">
+      <div class="carousel-content">
+        <p>¡Software Gratis!</p>
+        <p>¡CD-ROM Gratis!</p>
+        <p>¡Promociones Exclusivas!</p>
+        <p>¡Guía básica de linux!</p>
+      </div>
+    </div>
+  
+ 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Logo" id="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a> 
+           </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="tendencias.html">Tendencias</a> 
+            </li>
+    
+            <li class="nav-item">
+              <a class="nav-link" href="Estrategias.html">Estrategias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="PC.html">PCs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Noticias.html">Noticias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Pasatiempos.html">Pasatiempos</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  <div class="container">
+    
+    <div class="featured-image">
+      <img src="microsoft 2.jpg" alt="Imagen destacada">
+    </div>
+
+   
+    <h1 class="article-title">MICROSOFT INTERNET EXPLORER 4.0</h1>
+
+ 
+    <p class="article-meta">Por Valentina Leiva | Junio 1997</p>
+
+    <!-- Contenido del artículo -->
+    <div class="article-content">
+      <p>La versión 4.0 destaca por su integración con el sistema operativo Windows 95, ofreciendo una interfaz más rápida y fluida, con mejoras significativas en la gestión de páginas web y la capacidad de personalización. Entre sus características clave se incluyen la compatibilidad con tecnologías avanzadas como Java y ActiveX, lo que permite una experiencia de navegación más rica y dinámica. La evaluación resalta su capacidad para gestionar múltiples ventanas y su integración con el entorno de escritorio, posicionándolo como un navegador más completo y eficiente frente a sus competidores de la época.</p>
+
+      <h2>Innovación y rendimiento al servicio de la web</h2>
+      <p>Internet Explorer 4.0 introduce importantes avances en cuanto a velocidad y fluidez, elevando la experiencia de navegación a un nuevo nivel. Esta versión optimiza el uso de recursos del sistema, mejorando la interacción con sitios web complejos y dinámicos. Además, la compatibilidad con estándares emergentes como Java y ActiveX abre la puerta a aplicaciones web más interactivas y sofisticadas. Con un diseño pensado para facilitar el trabajo multitarea, el navegador permite una gestión eficiente de múltiples ventanas, haciendo de cada sesión de navegación una experiencia más productiva y personalizada.</p>
+
+
+    </div>
+
+    <!-- Artículos relacionados -->
+    <div class="related-articles">
+      <h2>Imagenes</h2>
+      <div class="related-list">
+        <div class="related-item">
+          <img src="microsoftinstall.jpg" alt="Artículo relacionado 1">
+          <h3>Install</h3>
+        </div>
+        <div class="related-item">
+          <img src="microsoftnav.jpg" alt="Artículo relacionado 2">
+          <h3>Navegación</h3>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <footer>
+    <p>&copy; PC MAGAZINE Chile.</p>
+  </footer>
+</body>
+</html>
